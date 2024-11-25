@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KIMJAE Store - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css"
+    />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-center">
+            <p class="mb-0 phone pl-md-2">
+              <a href="#" class="mr-2"
+               <p class="mb-0 phone pl-md-2" style="color: white;">
+    <span class="mr-2"></span> website by @ceceaan
+</p>
+            </p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-md-end">
+            <div class="social-media mr-4">
+              <p class="mb-0 d-flex">
+                <a
+                  href="#"
+                  class="d-flex align-items-center justify-content-center"
+                  ><span class="fa fa-facebook"
+                    ><i class="sr-only">Facebook</i></span
+                  ></a
+                >
+                <a
+                  href="#"
+                  class="d-flex align-items-center justify-content-center"
+                  ><span class="fa fa-twitter"
+                    ><i class="sr-only">Twitter</i></span
+                  ></a
+                >
+                <a
+                  href="#"
+                  class="d-flex align-items-center justify-content-center"
+                  ><span class="fa fa-instagram"
+                    ><i class="sr-only">Instagram</i></span
+                  ></a
+                >
+                <a
+                  href="#"
+                  class="d-flex align-items-center justify-content-center"
+                  ><span class="fa fa-dribbble"
+                    ><i class="sr-only">Dribbble</i></span
+                  ></a
+                >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">KIMJAE <span>store</span></a>
+        <div class="order-lg-last btn-group">
+          <a
+            href="#"
+            class="btn-cart dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span class="flaticon-shopping-bag"></span>
+            <div class="d-flex justify-content-center align-items-center">
+              <small>3</small>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-item d-flex align-items-start" href="#">
+              <div
+                class="img"
+                style="background-image: url(images/p.jpg)"
+              >
+            
+    </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Payment - KIMJAE Store</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-5">Payment</h1>
+
+    <div id="payment-cart-items"></div>
+    
+    <hr>
+    
+    <h3>Total to Pay: $<span id="payment-total">0.00</span></h3>
+    <div id="payment-method"></div>
+    
+    <button class="btn btn-success mt-3" onclick="completePayment()">Complete Payment</button>
+  </div>
+
+  <script>
+    // Function to display payment details
+    function displayPayment() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let paymentItemsDiv = document.getElementById('payment-cart-items');
+      let totalPrice = 0;
+
+      paymentItemsDiv.innerHTML = ''; // Clear previous payment details
+
+      cart.forEach(item => {
+        paymentItemsDiv.innerHTML += `<p>${item.name} - $${item.price}</p>`;
+        totalPrice += item.price;
+      });
+
+      document.getElementById('payment-total').textContent = totalPrice.toFixed(2);
+
+      // Get the selected payment method from the checkout page
+      let paymentMethod = localStorage.getItem('paymentMethod') || 'Not selected';
+      document.getElementById('payment-method').innerHTML = `<p>Payment Method: ${paymentMethod}</p>`;
+    }
+
+    // Function to complete the payment
+    function completePayment() {
+      alert('Payment completed successfully!');
+      localStorage.removeItem('cart'); // Clear cart after payment
+      window.location.href = 'index.html'; // Go back to the product page
+    }
+
+    // Call displayPayment on page load
+    window.onload = displayPayment;
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+  
+</body>
+</html>
